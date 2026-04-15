@@ -1,0 +1,45 @@
+/* Simple responsive styles for the domain sale SPA */
+:root{
+  --loyal-white: #FDFDFD;
+  --sovereign-cyan: #06B6D4;
+  --deep-cyan: #0E7490;
+  --slate-dark: #1A202C;
+  --muted-gray: #5A6474;
+  --system-border: #EAEAEF;
+  --bg: var(--loyal-white);
+  --card: #FFFFFF;
+  --accent: var(--sovereign-cyan);
+  --text-primary: #2D3748;
+  --text-secondary: var(--muted-gray);
+}
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,\"Helvetica Neue\",Arial;line-height:1.4;background:var(--bg);color:var(--text-primary);margin:0}
+.container{max-width:820px;margin:40px auto;padding:16px}
+header{text-align:center;margin-bottom:18px}
+h1{font-size:2.25rem;margin:0}
+.tag{color:var(--text-secondary);margin-top:6px}
+.card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);border:1px solid var(--system-border)}
+.price{font-size:2rem;color:var(--accent);margin:8px 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;border:1px solid var(--system-border);background:transparent;text-decoration:none;color:var(--accent);font-weight:600}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 6px 12px rgba(6,182,212,0.12)}
+.form{margin-top:18px;display:grid;gap:10px}
+.form label{display:block;font-size:0.9rem}
+input[type="text"],textarea{width:100%;padding:8px;border-radius:8px;border:1px solid var(--system-border);background:transparent;color:var(--text-primary)}
+footer{margin-top:18px;text-align:center;color:var(--text-secondary);font-size:0.9rem}
+.small{color:var(--text-secondary);margin-top:14px}
+@media(min-width:720px){.actions{justify-content:flex-start}}
+
+/* Brand/logo */
+.brand{display:flex;align-items:center;gap:12px;justify-content:center}
+.logo{height:48px;width:auto}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark){
+  :root{ --bg: var(--slate-dark); --card: #0f1724; --text-primary: #FDFDFD; --text-secondary: #AAB3BF; --accent: var(--sovereign-cyan)}
+  body{background:var(--bg);color:var(--text-primary)}
+  .card{background:var(--card);border-color:#111216}
+  .btn{color:var(--accent);border-color:transparent}
+  .btn.primary{box-shadow:0 6px 18px rgba(14,116,144,0.16)}
+  input[type="text"],textarea{background:transparent;border-color:#26272b;color:var(--text-primary)}
+}
