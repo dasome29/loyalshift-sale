@@ -11,4 +11,4 @@ Contact:
 - Email: dasome29+cf@hotmail.com
 - Phone: +506 63562425
 
-Deploy as a static site (Netlify, Vercel, GitHub Pages, etc.).# loyalshift-sale
+Deploy as a static site GitHub Pages at loyalshift-sale.
